@@ -1,0 +1,12 @@
+version: "3"
+services:
+  nginx:
+    build: ${HOMEDIR}
+    image: zongzw/nginx-usecases-image:latest
+    container_name: tryngx
+    ports:
+     - 8443:443
+     - 8080:80
+    volumes:
+     - ${HOMEDIR}:/root/workdir
+    entrypoint: "bash /root/daemon.sh"
