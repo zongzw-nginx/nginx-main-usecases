@@ -4,7 +4,7 @@ FROM centos:7
 
 RUN yum install -y epel-release
 RUN yum update -y
-RUN yum install -y which wget unzip curl tree net-tools vim
+RUN yum install -y which wget unzip curl tree net-tools vim git
 RUN yum install -y gcc automake autoconf libtool make
 RUN yum install -y openssl openssl-devel
 #RUN yum install -y goaccess
